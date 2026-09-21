@@ -10,5 +10,6 @@ za celý školní rok. Odevzdává se commitem, ne mailem.
 - (další měsíce přibudou)
 
 ## Kdo
+21.9.2026
 
 Kód žáka: 10 · třída IT2
