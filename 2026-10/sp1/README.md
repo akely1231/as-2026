@@ -39,3 +39,9 @@ erDiagram
     ZAK ||--o{ PRIHLASKA : ma
     KROUZEK ||--o{ PRIHLASKA : obsahuje
 ```
+
+```sql
+SELECT nazev, cena_kc
+FROM krouzky
+WHERE cena_kc > 500;
+```
