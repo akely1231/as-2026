@@ -12,30 +12,27 @@ prihlasky: PK id_prihlasky, FK id_zaka → zaci, FK id_krouzku → krouzky
 
 ```mermaid
 erDiagram
-    ZAK {
-        int id_zaka PK
+    ZAKAZNIK ||--o{ OBJEDNAVKA : "zadává"
+    OBJEDNAVKA ||--|{ POLOZKA : "obsahuje"
+    PRODUKT ||--o{ POLOZKA : "je v"
+
+    ZAKAZNIK {
+        int id PK
         string jmeno
         string prijmeni
-        string trida
+        string mesto
+        string email
     }
-
-    KROUZEK {
-        int id_krouzku PK
+    OBJEDNAVKA {
+        int cislo PK
+        date datum
+        int id_zakaznika FK
+    }
+    PRODUKT {
+        int id PK
         string nazev
-        string vedouci
-        string den
-        string cas
-        string mistnost
-        int cena_kc
     }
-
-    PRIHLASKA {
-        int id_prihlasky PK
-        int id_zaka FK
-        int id_krouzku FK
-        string zaplaceno
+    POLOZKA {
+        int id_objednavky FK
     }
-
-    ZAK ||--o{ PRIHLASKA : ma
-    KROUZEK ||--o{ PRIHLASKA : obsahuje
 ```
