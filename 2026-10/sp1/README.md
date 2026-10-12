@@ -41,7 +41,7 @@ erDiagram
 ```
 
 ```sql
-SELECT nazev, cena_kc
+SELECT nazev, cena
 FROM krouzky
-WHERE cena_kc > 500;
+WHERE cena > 500;
 ```
