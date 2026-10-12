@@ -6,7 +6,7 @@ sloupce mezera mezi IT 2
 nema dostatecne velke sloupce
 
 
-zaci: PK id_zaka \n
+zaci: PK id_zaka
 krouzky: PK id_krouzku
 prihlasky: PK id_prihlasky, FK id_zaka → zaci, FK id_krouzku → krouzky
 
